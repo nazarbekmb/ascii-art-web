@@ -19,13 +19,14 @@
                 <span class="right"></span>
                 <span class="bottom"></span>
                 <span class="left"></span>
+                
                 <div class="submit-button">
                     <button class="button" type="reset">Reset</button>
                     <select class="button" name="ascii-style" >
                         <option value="">--Please select a banner--</option>
                         <option value="Standard">Standard</option>
                         <option value="Shadow">Shadow</option>
-                        <option value="Tinkertoy">Thinkertoy</option>
+                        <option value="Thinkertoy">Thinkertoy</option>
                     </select>
                     <button class="button" type="submit">Submit</button>
                 </div>
@@ -33,7 +34,7 @@
         </div>
         <div class="outputbox">
             <form action="get_article" method="get">
-                <output name="output_title" class="output-type" method="get">{{.Output}}</output>
+                <div name="output_title" class="output-type" method="get">{{.Output}}</div>
             <!-- <textarea name="output_title" class="output-type" method="get">{{.Output}}</textarea> -->
             </form>
         </div>

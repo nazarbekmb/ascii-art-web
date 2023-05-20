@@ -104,7 +104,7 @@ func main() {
 	http.HandleFunc("/", index)                                                    // главная страничка
 	http.HandleFunc("/error/", error_page)                                         // страничка ошибки на будущее
 	http.Handle("/ui/", http.StripPrefix("/ui/", http.FileServer(http.Dir("ui")))) // каждый раз когда идёт обращение нач-ся на "ui" ui убирается по оставшемуся пути ищется соответствующий файл
-	http.HandleFunc("/save_article", post_article)
+	http.HandleFunc("/post_article", post_article)
 	http.HandleFunc("/get_article/", get_article)
 	http.ListenAndServe(":8181", nil)
 }
