@@ -19,18 +19,16 @@ func AsciiArt(text, style string) (string, error) {
 	CheckData(data) // проверка на пустоту файла
 	data1 := strings.ReplaceAll(string(data), "\\n", "\n")
 	//args := strings.Join(os.Args[1:], " ")
-	if len(text) > 49 {
-		fmt.Println("Too many items\nMaximum number 49")
-		return "", nil
-	}
+	// if len(text) > 49 {
+	// 	fmt.Println("Too many items\nMaximum number 49")
+	// 	return "", nil
+	// }
 	res := strings.Split(string(data1), "\n")
 
 	ChmoMap := MakeMap(res)
 	chmotext := strings.Split(strings.ReplaceAll(text, "\\n", "\n"), "\n")
 
 	output := PrintMap(chmotext, ChmoMap)
-	fmt.Println(output)
+	// fmt.Println(output)
 	return output, err
 }
-
-// А ПОТОМ МЫ ЧЕРЕЗ ГЕТ ЕГО ОТСЫЛАЛИ ВО ВТОРУЮ ФОРМУ
