@@ -14,6 +14,11 @@ body {
     height: 100%;
 }
 
+.output_title {
+    color: #ffffff;
+    width: 500px;
+    overflow: auto;
+}
 .main {
     position: fixed;
     top: 0;

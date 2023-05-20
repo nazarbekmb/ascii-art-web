@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/ui/css/style.css">
 </head>
 <body>
+
     <div class="main">
         <div class="header">
             <h1>ASCII-ART-WEB</h1>
@@ -34,7 +35,8 @@
         </div>
         <div class="outputbox">
             <form action="get_article" method="get">
-                <div name="output_title" class="output-type" method="get">{{.Output}}</div>
+                <!-- <div name="output_title" class="output-type" method="get">{{.Output}}</div> -->
+                <pre class="output_titlt">{{.}}</pre>
             <!-- <textarea name="output_title" class="output-type" method="get">{{.Output}}</textarea> -->
             </form>
         </div>
