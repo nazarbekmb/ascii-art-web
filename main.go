@@ -106,10 +106,10 @@ func main() {
 	http.Handle("/ui/", http.StripPrefix("/ui/", http.FileServer(http.Dir("ui")))) // каждый раз когда идёт обращение нач-ся на "ui" ui убирается по оставшемуся пути ищется соответствующий файл
 	http.HandleFunc("/post_article", post_article)
 	http.HandleFunc("/get_article/", get_article)
+	fmt.Println("Server is listening...http://127.0.0.1:8181/")
 	http.ListenAndServe(":8181", nil)
 }
 
-// fmt.Println("Server is listening...http://127.0.0.1:8181/")
 // err := http.ListenAndServe(":8181", nil) // устанавливаем порт веб-сервера
 // if err != nil {
 // 	log.Fatal("ListenAndServe: ", err)

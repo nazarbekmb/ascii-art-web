@@ -32,3 +32,5 @@ func AsciiArt(text, style string) (string, error) {
 	// fmt.Println(output)
 	return output, err
 }
+
+// А ПОТОМ МЫ ЧЕРЕЗ ГЕТ ЕГО ОТСЫЛАЛИ ВО ВТОРУЮ ФОРМУ

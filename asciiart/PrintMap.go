@@ -1,21 +1,21 @@
 package asciiart
 
-func PrintMap(chmotext []string, ChmoMap map[rune][]string) string {
+func PrintMap(chmoargs []string, ChmoMap map[rune][]string) string {
 	count := 0
 	res := ""
-	for _, value := range chmotext {
+	for _, value := range chmoargs {
 		if len(value) > 0 {
 			count++
 		}
 	}
 	if count == 0 {
-		for i := 0; i < len(chmotext)-1; i++ {
+		for i := 0; i < len(chmoargs)-1; i++ {
 			// fmt.Println()
 			res += "\n"
 		}
 		return ""
 	}
-	for _, arg := range chmotext {
+	for _, arg := range chmoargs {
 		for _, v := range arg {
 			if v > 126 || v < 32 {
 				// fmt.Println("ERROR: Need ASCII character")
@@ -31,7 +31,7 @@ func PrintMap(chmotext []string, ChmoMap map[rune][]string) string {
 				// fmt.Println()
 				res += "\n"
 			}
-		} else if len(chmotext) == 1 && len(arg) == 0 {
+		} else if len(chmoargs) == 1 && len(arg) == 0 {
 			return ""
 		} else {
 			// fmt.Println()
